@@ -31,7 +31,8 @@ body {
 
 .logo-img {
     margin-left: 14px;
-    height: 32px;
+    width: 120px;
+    height: 43px;
 }
   
 .sidebar button {
@@ -151,13 +152,7 @@ body {
 
 .bxl-instagram-alt {
     float: right;
-    margin-right: 60px;
-    margin-bottom: 2S0px;
-    font-size: 40px;
+    margin-right: 30px;
+    margin-top: 0px;
+    font-size: 38px;
 }
-
-
-
-
-
-  
