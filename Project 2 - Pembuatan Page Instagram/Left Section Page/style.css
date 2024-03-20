@@ -18,7 +18,7 @@ body {
     align-items: flex-start;
     width: 250px;
     height: 100%;
-    padding: 40px 10px 30px 10px;
+    padding: 30px 10px 0px 10px;
     background: #ffffff;
     border-right: 1px solid #dbdbdb;
     transition: 0.3s;
@@ -26,7 +26,7 @@ body {
   
 .sidebar-header {
     width: 100%;
-    margin-bottom: 44px;
+    margin-bottom: 35px;
 }
 
 .logo-img {
@@ -146,7 +146,7 @@ body {
     width: 100%;
 }
   
-.sidebar > nav button:last-child {
+.sidebar > nav button:nth-last-child(2) {
     margin-top: auto;
 }
 
