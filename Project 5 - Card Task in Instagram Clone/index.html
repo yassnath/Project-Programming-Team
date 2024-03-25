@@ -423,7 +423,7 @@
                       let makanan_3 = 15000;
                       let total = makanan_1 + makanan_2 + makanan_3;
                       let diskon = 0.1 * total;
-                      let totalbayar = total + diskon;
+                      let totalbayar = total - diskon;
 
                       document.getElementById("demo1").innerHTML = "Diskon 10% = " + diskon;
                       document.getElementById("demo2").innerHTML = "Total Pembayaran = " + totalbayar;
@@ -1539,7 +1539,5 @@
         }
       }
   </script>
-    
-
   </body>
 </html>
