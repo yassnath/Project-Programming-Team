@@ -409,24 +409,45 @@
 
               <div class="post__content">
                 <div class="post__medias">
-                  <h2 style="margin-left: 237px; margin-top: 30px;">Card-Task</h2>
                   <div id="card-task">
-                    <p id="demo"></p>
-                    <p id="demo1"></p>
-                    <p id="demo2"></p>
+                    <h2 style="margin-left: 50px;">Card-Task</h2>
+                    <br><br>
+                    <ol>
+                      <li>
+                          <strong>Es Kopi Susu:</strong> Rp 10000
+                      </li>
+                      <li>
+                          <strong>Roti Bakar:</strong> Rp 25000
+                      </li>
+                      <li>
+                          <strong>Ice Cream</strong> Rp 15000
+                      </li>
+                  </ol>
+                  <br>
+                  <p>
+                      <strong>Total belanja:</strong>
+                      <span id="demo3"></span>
+                  </p>
+                  <p>
+                      <strong>Diskon 10%:</strong>
+                      <span id="demo1"></span>
+                  </p>
+                  <p>
+                      <strong>Total Pembayaran:</strong>
+                      <span id="demo2"></span>
+                  </p>
                     <script>
-                      const makanan =[10000, 25000, 15000]
-                      document.getElementById("demo").innerHMTL = 'Hi';
-
-                      let makanan_1 = 10000;
-                      let makanan_2 = 25000;
-                      let makanan_3 = 15000;
+                      const makanan = ["10000", "25000", "15000"];
+                      const makanan_1 = 10000;
+                      const makanan_2 = 25000;
+                      const makanan_3 = 15000;
                       let total = makanan_1 + makanan_2 + makanan_3;
                       let diskon = 0.1 * total;
                       let totalbayar = total - diskon;
 
-                      document.getElementById("demo1").innerHTML = "Diskon 10% = " + diskon;
-                      document.getElementById("demo2").innerHTML = "Total Pembayaran = " + totalbayar;
+                      document.getElementById("demo3").textContent = "Rp " + total; 
+                      document.getElementById("demo1").innerHTML = "Rp " + diskon;
+                      document.getElementById("demo2").innerHTML = "Rp " + totalbayar;
                     </script>
                   </div>
                 </div>
@@ -1539,5 +1560,7 @@
         }
       }
   </script>
+    
+
   </body>
 </html>
