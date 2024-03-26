@@ -220,6 +220,7 @@ img {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-top: 20px;
 
   display: flex;
   flex-direction: column;
@@ -461,7 +462,7 @@ img {
   max-width: 290px;
   position: fixed;
   left: 910px;
-  top: 15px;
+  top: 18px;
   transform: translateX(calc(-50% + 322px));
 
   display: none;
@@ -759,6 +760,7 @@ body {
   
   .stories {
     border: 1px solid var(--border);
+    margin-top: 30px;
     border-radius: 4px;
     margin-left: 0px;
     width: 100%;
@@ -815,7 +817,7 @@ body {
     }
   
   .stories {
-    width: 600pzpx;
+    width: 100%;
   }
 
   .side-menu {
@@ -943,11 +945,11 @@ body {
 #card-task {
   border-radius: 10px;
   background-color: #fdf;
-  margin-top: 80px;
+  margin-top: 50px;
   margin-right: 30px;
   margin-bottom: 30px;
-  margin-left: -212px;
-  padding: 50px;
+  margin-left: 145px;
+  padding: 40px;
   font-size: 18px;
   font-family: BlinkMacSystemFont;
 }
