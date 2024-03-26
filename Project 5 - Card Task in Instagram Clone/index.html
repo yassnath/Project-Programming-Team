@@ -411,19 +411,23 @@
                 <div class="post__medias">
                   <div id="card-task">
                     <h2 style="margin-left: 50px;">Card-Task</h2>
-                    <br><br>
-                    <ol>
+                    <br>
+                    <h5>-----------------------------------------</h5>
+                    <br>
+                    <ol class="menu">
                       <li><strong>Es Kopi Susu:</strong> Rp 10000</li>
                       <li><strong>Roti Bakar:</strong> Rp 25000</li>
                       <li><strong>Ice Cream</strong> Rp 15000</li>
                     </ol>
                     <br>
+                    <h5>-----------------------------------------</h5>
+                    <br>
                     <p><strong>Total belanja:</strong>
-                        <span id="demo3"></span></p>
-                    <p><strong>Diskon 10%:</strong>
                         <span id="demo1"></span></p>
-                    <p><strong>Total Pembayaran:</strong>
+                    <p><strong>Diskon 10%:</strong>
                         <span id="demo2"></span></p>
+                    <p><strong>Total Pembayaran:</strong>
+                        <span id="demo3"></span></p>
                     <script>
                       const makanan = ["10000", "25000", "15000"];
                       const makanan_1 = 10000;
@@ -433,9 +437,9 @@
                       let diskon = 0.1 * total;
                       let totalbayar = total - diskon;
 
-                      document.getElementById("demo3").textContent = "Rp " + total; 
-                      document.getElementById("demo1").innerHTML = "Rp " + diskon;
-                      document.getElementById("demo2").innerHTML = "Rp " + totalbayar;
+                      document.getElementById("demo1").textContent = "Rp " + total; 
+                      document.getElementById("demo2").innerHTML = "Rp " + diskon;
+                      document.getElementById("demo3").innerHTML = "Rp " + totalbayar;
                     </script>
                   </div>
                 </div>
