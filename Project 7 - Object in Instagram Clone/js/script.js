@@ -1,23 +1,26 @@
 // object
-const listMenus = {
-    menus1: {nama: "Es Kopi Susu", harga: 10000},
-    menus2: {nama: "Roti Bakar", harga: 25000},
-    menus3: {nama: "Tahu Telor", harga: 15000},
-    menus4: {nama: "Nasi Goreng", harga: 12000},
-};
+const listMenus = [
+    { nama: "Es Kopi Susu", harga: 10000 },
+    { nama: "Roti Bakar", harga: 25000 },
+    { nama: "Tahu Telor", harga: 15000 },
+    { nama: "Nasi Goreng", harga: 12000 },
+];
 
-document.getElementById("me1").innerHTML = listMenus.menus1.nama + ": Rp " + listMenus.menus1.harga;
-document.getElementById("me2").innerHTML = listMenus.menus2.nama + ": Rp " + listMenus.menus2.harga;
-document.getElementById("me3").innerHTML = listMenus.menus3.nama + ": Rp " + listMenus.menus3.harga;
-document.getElementById("me4").innerHTML = listMenus.menus4.nama + ": Rp " + listMenus.menus4.harga;
+//document.getElementById("me1").innerHTML = listMenus.menus1.nama + ": Rp " + listMenus.menus1.harga;
+//document.getElementById("me2").innerHTML = listMenus.menus2.nama + ": Rp " + listMenus.menus2.harga;
+//document.getElementById("me3").innerHTML = listMenus.menus3.nama + ": Rp " + listMenus.menus3.harga;
+//document.getElementById("me4").innerHTML = listMenus.menus4.nama + ": Rp " + listMenus.menus4.harga;
 
 let tot = 0;
-for (let menu in listMenus) {
-  tot += listMenus[menu].harga;
+let menus = "";
+for (let i = 0; i < listMenus.length; i++) {
+  menus += `<li class="menus">${listMenus[i].nama}: Rp ${listMenus[i].harga}</li>`;
+  tot += listMenus[i].harga;
 }
 let discount = 0.1 * tot;
 let totpay = tot - discount;
 
+document.getElementById("menus").innerHTML = menus;
 document.getElementById("doem1").innerHTML = "Rp " + tot;
 document.getElementById("doem2").innerHTML = "Rp " + discount;
 document.getElementById("doem3").innerHTML = "Rp " + totpay;
