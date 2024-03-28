@@ -167,7 +167,7 @@ img {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: px;
+  gap: 8px;
 }
 
 .post__left-button,
