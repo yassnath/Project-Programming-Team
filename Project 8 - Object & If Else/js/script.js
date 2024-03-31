@@ -58,7 +58,6 @@ if (isMember) {
   ttlprc = ttl;
 }
 
-
 document.getElementById("list").innerHTML = lml;
 document.getElementById("order").innerHTML = om;
 document.getElementById("ttl-harga").innerHTML = "Rp" + `${ttlprc}`;
