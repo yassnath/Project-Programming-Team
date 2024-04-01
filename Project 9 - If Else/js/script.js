@@ -1,6 +1,6 @@
 // 5-mahasiswa
 const mhsw = [
-  { np: "Taufiq", nilai: 90, figma: true },
+  { np: "Taufiq", nilai: 100, figma: true },
   { np: "Rafi", nilai: 73, figma: true },
   { np: "Andreas", nilai: 25, figma: false },
   { np: "Yardan", nilai: 51, figma: false },
