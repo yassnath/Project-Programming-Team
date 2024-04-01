@@ -15,7 +15,7 @@ for (let i = 0; i < mhsw.length; i++) {
   if (mhsw[i].figma) {
     skor += 10;
   }
-
+  /*
   if (skor >= 0 && skor <= 50) {
     grade = "E";
   } else if (skor >= 50 && skor <= 60) {
@@ -29,6 +29,22 @@ for (let i = 0; i < mhsw.length; i++) {
   } else if (skor > 100) {
     grade = "A+";
   }
+  */
+  if (skor > 100) {
+    grade = "A+";
+  } else if (skor >= 80 && skor <= 100) {
+    grade = "A";
+  } else if (skor >= 70 && skor <= 80) {
+    grade = "B";
+  } else if (skor >= 60 && skor <= 70) {
+    grade = "C";
+  } else if (skor >= 50 && skor <= 60) {
+    grade = "D";
+  } 
+  else {
+    grade = "E";
+  }
+  //
   document.getElementById("mhs").innerHTML += `<li>${mhsw[i].np} <br> - Nilai:  ${mhsw[i].nilai} <br> - Grade: ${grade}<br><br></li>`;
 }
 
