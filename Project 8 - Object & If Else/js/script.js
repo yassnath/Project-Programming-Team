@@ -19,7 +19,7 @@ for (let b = 0; b < lm.length; b++) {
   }
 }
 
-const selectedlm = ["Nasi Pecel", "Nasi Jagung", "Nasi Rendang"];
+const selectedlm = [lm[0].nm , lm[1].nm, lm[4].nm];
 let om = "";
 
 for (let a = 0; a < lm.length; a++) {
@@ -31,17 +31,21 @@ for (let a = 0; a < lm.length; a++) {
       variant = "Pedas Banget";
     } else if (lm[a].nm === "Nasi Rendang") {
       variant = "Original";
-    } else if (lm[a].nm === "Nasi Pecel") {
-      if (isMember) {
-        ttl += 5000;
-        om += `<li>Nasi Pecel: Rp 5000 (PROMO)<br> Varian: ${variant}</li>`;
-      }
+    // } else if (lm[a].nm === "Nasi Pecel") {
+    //   if (isMember) {
+    //     ttl += 5000;
+    //     om += `<li>Nasi Pecel: Rp 5000 (PROMO)<br> Varian: ${variant}</li>`;
+    //   }
     }
-    if (lm[a].nm === "Nasi Pecel" && !isMember) {
-      ttl += 5000;
-      om += `<li>Nasi Pecel: Rp 5000 (PROMO)<br> Varian: ${variant}</li>`;
-    }
-    if (lm[a].nm === "Nasi Jagung" || lm[a].nm === "Nasi Rendang") {
+    // if (lm[a].nm === "Nasi Pecel" && !isMember) {
+    //   ttl += 5000;
+    //   om += `<li>Nasi Pecel: Rp 5000 (PROMO)<br> Varian: ${variant}</li>`;
+    // }
+    
+    if (lm[a].nm === "Nasi Jagung" || lm[a].nm === "Nasi Rendang" || lm[a].nm === "Nasi Pecel") {
+      if (lm[a].nm === "Nasi Pecel") {
+        lm[a].prc = 5000
+      } 
       ttl += lm[a].prc;
       om += `<li>${lm[a].nm}: Rp ${lm[a].prc} <br> Varian: ${variant} ${lvlon > 0 ? `+ level ${lvlon}` : ""}</li>`;
     }
