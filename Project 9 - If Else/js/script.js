@@ -1,50 +1,35 @@
 // 5-mahasiswa
 const mhsw = [
-  { np: "Taufiq", nilai: 100, figma: true },
+  { np: "Taufiq", nilai: 90, figma: true },
   { np: "Rafi", nilai: 73, figma: true },
   { np: "Andreas", nilai: 25, figma: false },
   { np: "Yardan", nilai: 51, figma: false },
   { np: "Nathan", nilai: 67, figma: true },
 ];
 
-let skor = 0;
-let grade = "";
-
 for (let i = 0; i < mhsw.length; i++) {
-  skor = mhsw[i].nilai;
+  let nilai = mhsw[i].nilai;
   if (mhsw[i].figma) {
-    skor += 10;
+    nilai += 10;
   }
-  /*
-  if (skor >= 0 && skor <= 50) {
-    grade = "E";
-  } else if (skor >= 50 && skor <= 60) {
-    grade = "D";
-  } else if (skor >= 60 && skor <= 70) {
-    grade = "C";
-  } else if (skor >= 70 && skor <= 80) {
-    grade = "B";
-  } else if (skor >= 80 && skor <= 100) {
-    grade = "A";
-  } else if (skor > 100) {
+
+  let grade = "";
+  if (nilai > 100) {
     grade = "A+";
-  }
-  */
-  if (skor > 100) {
-    grade = "A+";
-  } else if (skor >= 80 && skor <= 100) {
+    nilai = 100;
+  } else if (nilai >= 80 && nilai <= 100) {
     grade = "A";
-  } else if (skor >= 70 && skor <= 80) {
+  } else if (nilai >= 70 && nilai <= 80) {
     grade = "B";
-  } else if (skor >= 60 && skor <= 70) {
+  } else if (nilai >= 60 && nilai <= 70) {
     grade = "C";
-  } else if (skor >= 50 && skor <= 60) {
+  } else if (nilai >= 50 && nilai <= 60) {
     grade = "D";
   } 
   else {
     grade = "E";
   }
-  //
+  mhsw[i].nilai = nilai;
   document.getElementById("mhs").innerHTML += `<li>${mhsw[i].np} <br> - Nilai:  ${mhsw[i].nilai} <br> - Grade: ${grade}<br><br></li>`;
 }
 
