@@ -1070,12 +1070,12 @@ td, th {
 #tb {
   text-align: center;
 }
-#total-pasien {
+#totalpasien {
   font-size: 15px;
 }
-#pasien-under-20 {
+#usiadibawah20 {
   font-size: 15px;
 }
-#pasien-over-50 {
+#usiadiatas50 {
   font-size: 15px;
 }
