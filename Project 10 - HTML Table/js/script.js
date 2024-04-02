@@ -58,30 +58,39 @@ const data = {
 
 const table = document.getElementById('table');
 
-let index = 0;
-while (index < data.data.length) { // corrected line
+let pas = 0;
+while (pas < data.data.length) {
   const row = document.createElement('tr');
   const id = document.createElement('td');
-  id.textContent = data.data[index].id; // corrected line
+  id.textContent = data.data[pas].id;
   row.appendChild(id);
   const nama = document.createElement('td');
-  nama.textContent = data.data[index].name; // corrected line
+  nama.textContent = data.data[pas].name;
   row.appendChild(nama);
   const usia = document.createElement('td');
-  usia.textContent = data.data[index].age; // corrected line
+  usia.textContent = data.data[pas].age;
   row.appendChild(usia);
   table.querySelector('tbody').appendChild(row);
-  index++;
+  pas++;
 }
 
-const totalpasien = data.data.length; // corrected line
-document.getElementById('total-pasien').textContent = `Total pasien = ${totalpasien} orang`;
+let usiadibawah20 = 0;
+let usiadiatas50 = 0;
 
-const pasienUnder20 = data.data.filter((pasien) => pasien.age < 20).length; // corrected line
-document.getElementById('pasien-under-20').textContent = `Total pasien yang usianya < 20 tahun = ${pasienUnder20} orang`;
+let i = 0;
+while (i < data.data.length) {
+  if (data.data[i].age < 20) {
+    usiadibawah20++;
+  } else if (data.data[i].age > 50) {
+    usiadiatas50++;
+  }
+  i++;
+}
 
-const pasienOver50 = data.data.filter((pasien) => pasien.age > 50).length; // corrected line
-document.getElementById('pasien-over-50').textContent = `Total pasien yang usianya > 50 tahun = ${pasienOver50} orang`;
+const totalpasien = data.data.length;
+document.getElementById('totalpasien').textContent = `Total pasien = ${totalpasien} orang`;
+document.getElementById('usiadibawah20').textContent = `Total pasien yang usianya < 20 tahun = ${usiadibawah20} orang`;
+document.getElementById('usiadiatas50').textContent = `Total pasien yang usianya > 50 tahun = ${usiadiatas50} orang`;
 
 // 5-mahasiswa
 const mhsw = [
