@@ -59,29 +59,29 @@ const data = {
 const table = document.getElementById('table');
 
 let index = 0;
-while (index < data.data.length) {
+while (index < data.data.length) { // corrected line
   const row = document.createElement('tr');
   const id = document.createElement('td');
-  id.textContent = data.data[index].id;
+  id.textContent = data.data[index].id; // corrected line
   row.appendChild(id);
   const nama = document.createElement('td');
-  nama.textContent = data.data[index].name;
+  nama.textContent = data.data[index].name; // corrected line
   row.appendChild(nama);
   const usia = document.createElement('td');
-  usia.textContent = data.data[index].age;
+  usia.textContent = data.data[index].age; // corrected line
   row.appendChild(usia);
   table.querySelector('tbody').appendChild(row);
   index++;
 }
 
-const totalPatients = data.data.length;
-document.getElementById('total-patients').textContent = `Total patients: ${totalPatients}`;
+const totalpasien = data.data.length; // corrected line
+document.getElementById('total-pasien').textContent = `Total pasien = ${totalpasien} orang`;
 
-const patientsUnder20 = data.data.filter((patient) => patient.age < 20).length;
-document.getElementById('patients-under-20').textContent = `Number of patients under 20: ${patientsUnder20}`;
+const pasienUnder20 = data.data.filter((pasien) => pasien.age < 20).length; // corrected line
+document.getElementById('pasien-under-20').textContent = `Total pasien yang usianya < 20 tahun = ${pasienUnder20} orang`;
 
-const patientsOver50 = data.data.filter((patient) => patient.age > 50).length;
-document.getElementById('patients-over-50').textContent = `Number of patients over 50: ${patientsOver50}`;
+const pasienOver50 = data.data.filter((pasien) => pasien.age > 50).length; // corrected line
+document.getElementById('pasien-over-50').textContent = `Total pasien yang usianya > 50 tahun = ${pasienOver50} orang`;
 
 // 5-mahasiswa
 const mhsw = [
