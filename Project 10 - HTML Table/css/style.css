@@ -1048,7 +1048,7 @@ body {
   margin-top: 30px;
   margin-right: 30px;
   margin-bottom: 40px;
-  margin-left: 180px;
+  margin-left: 110px;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 30px;
@@ -1059,7 +1059,7 @@ body {
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 200px;
+  width: 315px;
   font-size: 15px;
 }
 td, th {
@@ -1067,6 +1067,15 @@ td, th {
   text-align: middle;
   padding: 8px;
 }
-tr:nth-last-child(11) {
-  background-color: white;
+#tb {
+  text-align: center;
+}
+#total-pasien {
+  font-size: 15px;
+}
+#pasien-under-20 {
+  font-size: 15px;
+}
+#pasien-over-50 {
+  font-size: 15px;
 }
