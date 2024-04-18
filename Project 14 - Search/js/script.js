@@ -1,32 +1,43 @@
 // function search
-const dataCustomer = [
-  {id_cust: 1, nama_cust: 'Vega', usia_cust: 25},
-  {id_cust: 2, nama_cust: 'Yardan', usia_cust: 50},
-  {id_cust: 3, nama_cust: 'Taufiq', usia_cust: 64},
-  {id_cust: 4, nama_cust: 'Nathan', usia_cust: 14},
-  {id_cust: 5, nama_cust: 'Andreas', usia_cust: 29},
-  {id_cust: 6, nama_cust: 'Rafi', usia_cust: 44},
-  {id_cust: 7, nama_cust: 'Ilham', usia_cust: 53},
-  {id_cust: 8, nama_cust: 'Bram', usia_cust: 32},
-  {id_cust: 9, nama_cust: 'Fandi', usia_cust: 10},
-  {id_cust: 10, nama_cust: 'Riza', usia_cust: 78},
-];
+const dataCustomer = {
+  status: 200,
+  message: "view data collection",
+  data: [
+    {id_cust: 1, nama_cust: 'Vega', usia_cust: 25},
+    {id_cust: 2, nama_cust: 'Yardan', usia_cust: 50},
+    {id_cust: 3, nama_cust: 'Taufiq', usia_cust: 64},
+    {id_cust: 4, nama_cust: 'Nathan', usia_cust: 14},
+    {id_cust: 5, nama_cust: 'Andreas', usia_cust: 29},
+    {id_cust: 6, nama_cust: 'Rafi', usia_cust: 44},
+    {id_cust: 7, nama_cust: 'Ilham', usia_cust: 53},
+    {id_cust: 8, nama_cust: 'Bram', usia_cust: 32},
+    {id_cust: 9, nama_cust: 'Fandi', usia_cust: 10},
+    {id_cust: 10, nama_cust: 'Riza', usia_cust: 78},
+  ]
+};
 
 function searchData() {
-  const masukkan = document.getElementById('searchInput').value;
+  const masukkan = document.getElementById('searchInput').value.toLowerCase();
   const output = document.getElementById('result');
-  const ketemu = dataCustomer.find(item => item.nama_cust.toLowerCase() === masukkan.toLowerCase() || item.nama_cust.toUpperCase() === masukkan.toUpperCase());
-  
-  if (ketemu) {
-    let message = '';
-    if (ketemu.usia_cust > 70) {
-      message = 'anula';
-    } else if (ketemu.usia_cust <= 70 && ketemu.usia_cust > 50) {
-      message = 'asih joss';
-    } else {
-      message ='joss poll';
-    }
-    output.innerText = `${ketemu.nama_cust} (${ketemu.usia_cust}): ${message}`;
+  const inisial = dataCustomer.data.filter(item => {
+    const pencarian = item.nama_cust.toLowerCase();
+    return pencarian.includes(masukkan);
+  });
+
+  if (inisial.length > 0) {
+    let outputPesan = ''; 
+    inisial.forEach(item => {
+      let pesan = ''; 
+      if (item.usia_cust > 70) {
+        pesan = 'anula';
+      } else if (item.usia_cust <= 70 && item.usia_cust > 50) {
+        pesan = 'asih joss';
+      } else {
+        pesan ='joss poll';
+      }
+      outputPesan += `${item.nama_cust} (${item.usia_cust}): ${pesan}\n`;
+    });
+    output.innerText = outputPesan;
   }
   else {
     output.innerText ='Tidak ditemukan!';
