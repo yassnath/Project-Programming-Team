@@ -22,6 +22,8 @@ function searchData() {
   const inisial = dataCustomer.data.filter(item => {
     const pencarian = item.nama_cust.toLowerCase();
     return pencarian.includes(masukkan);
+    //const pencarian = item.usia_cust;  
+    //return pencarian.toString().includes(masukkan);
   });
 
   if (inisial.length > 0) {
@@ -35,7 +37,7 @@ function searchData() {
       } else {
         pesan ='joss poll';
       }
-      outputPesan += `${item.nama_cust} (${item.usia_cust}): ${pesan}\n`;
+      outputPesan += `${item.id_cust} - ${ item.nama_cust} (${item.usia_cust}): ${pesan}\n`;
     });
     output.innerText = outputPesan;
   }
